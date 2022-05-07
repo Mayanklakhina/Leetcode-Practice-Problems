@@ -10,7 +10,7 @@ public:
         
         while(low<=high){
             //finding the middle point of the given sorted array and store into a variable "mid"
-            int mid = (low+high)/2;
+            int mid = (high-low)/2+low;
             
             if(nums[mid]==target)
                 return mid;
