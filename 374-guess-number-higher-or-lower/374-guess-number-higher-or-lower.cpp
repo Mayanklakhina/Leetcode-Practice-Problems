@@ -19,7 +19,7 @@ public:
         
         while(true){
             //making our guess and storing into a variable "midNumber"
-            int midNumber = (maxNumber - minNumber) / 2 + minNumber;;
+            int midNumber = (maxNumber - minNumber) / 2 + minNumber;
             //putting our guess into a variable "result" by using the predefined API given above already
             int result = guess(midNumber);
             
