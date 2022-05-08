@@ -16,14 +16,7 @@ public:
             else
                 low=mid+1;
      }
-        return low;
-        // if(nums[mid+1]>target)
-        //     return mid+1;
-        // else 
-        //     return mid+2;
-        // if(nums[mid-1]>target)
-        //     return mid-2;
-        // else
-        //     return mid-1;
+        return high+1;
+
     }
 };
