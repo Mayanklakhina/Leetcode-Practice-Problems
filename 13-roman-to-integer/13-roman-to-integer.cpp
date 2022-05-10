@@ -18,6 +18,7 @@ public:
             
             //condition for let's say this roman numerals IV = 4 (5-1)
             if(hash[s[i]]<hash[s[i+1]])
+                
                 sum-=hash[s[i]];    //so for IV here, sum would be -1
             else
                 sum+=hash[s[i]];    //-1+5=4 (for next iteration when i=1)
