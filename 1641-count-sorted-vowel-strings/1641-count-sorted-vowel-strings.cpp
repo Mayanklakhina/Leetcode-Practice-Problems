@@ -6,7 +6,7 @@ public:
         int i = 1;
         int o = 1;
         int u = 1;
-        while(n-- > 1){
+        while((n--)> 1){
             a = a + e + i + o + u;
             e = e + i + o + u;
             i = i + o + u;
