@@ -9,10 +9,10 @@ public:
             while (low <= high) {
                 int mid = low + (high - low) / 2;
                 if (mid != i && 2 * arr[mid] == arr[i]) return true;
-                if (2 * arr[mid] < arr[i]) {
-                    low = mid + 1;
-                } else {
+                if (2 * arr[mid] >arr[i]) {
                     high = mid - 1;
+                } else {
+                    low = mid + 1;
                 }
             }
         }
