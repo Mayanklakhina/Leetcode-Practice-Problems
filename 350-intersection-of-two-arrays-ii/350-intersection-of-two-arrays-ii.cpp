@@ -11,9 +11,10 @@ public:
         }
         
         for(int i=0;i<n2;i++){
-            if(--hash[nums2[i]] >= 0) {
-                result.push_back(nums2[i]);
-            }
+            for(auto x : hash)
+                if(x.first==nums2[i]&&hash[nums2[i]]>0)
+                    result.push_back(nums2[i]);
+            hash[nums2[i]]--;
             }
             
         return result;
