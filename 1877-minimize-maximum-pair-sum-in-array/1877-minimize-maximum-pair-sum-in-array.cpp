@@ -3,7 +3,7 @@ public:
     int minPairSum(vector<int>& nums) {
         int i=0;
         int j = nums.size()-1;
-        int maximum = 0;
+        int maximum = INT_MIN;
         
         sort(nums.begin(),nums.end());
        
