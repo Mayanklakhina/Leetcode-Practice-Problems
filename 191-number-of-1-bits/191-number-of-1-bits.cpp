@@ -1,6 +1,17 @@
+// class Solution {
+// public:
+//     int hammingWeight(uint32_t n) {
+//         return bitset<32>(n).count();
+//     }
+// };
 class Solution {
 public:
     int hammingWeight(uint32_t n) {
-        return bitset<32>(n).count();
+        int cnt=0;  // count of set bit
+        while(n>0){  // iterate until all bits are traversed
+			++cnt;
+            n=n&(n-1); // change the first set bit from right to 0
+        }
+        return cnt;
     }
 };
