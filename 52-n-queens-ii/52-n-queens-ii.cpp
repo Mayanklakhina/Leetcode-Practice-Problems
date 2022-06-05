@@ -1,7 +1,7 @@
 class Solution {
 public:
     int totalNQueens(int n) {
-	vector<bool> col(n), diag(2*n+1), anti_diag(2*n+1);
+	vector<bool> col(n), diag(2*n-1), anti_diag(2*n+1);
 	return solve(col, diag, anti_diag, 0);
 }
    
