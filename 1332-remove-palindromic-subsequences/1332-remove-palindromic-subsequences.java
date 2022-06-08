@@ -1,14 +1,20 @@
 class Solution {
-public:
-    int removePalindromeSub(string s) {
-        int i=0, j=s.size()-1;
-        while(i<j) {
-			//If string is not palindrome return 2
-            if(s[i]!=s[j]) return 2;
-            i++;
-            j--;
-        }
+    public int removePalindromeSub(String s) {
         
-        return 1;
+        // if input string is palindrome 
+        if(isPalindrome(s)) return 1;
+        
+        //else return 2 beacuse string consisting of 'a' and 'b' character only so
+        // there can be only two palindromic string one will consists of 'a' and second will consists of 'b'
+        return 2;
     }
-};
+    
+    public boolean isPalindrome(String s){
+        
+        int n = s.length(), si = 0, ei = n-1;
+        while(si < ei)
+            if(s.charAt(si++) != s.charAt(ei--)) return false;
+    
+        return true;
+    }
+}
