@@ -1,9 +1,10 @@
 class Solution {
 public:
-    
+    //create a function to find out the nearest smaller element on left side with its index
     vector<int> NSL(vector<int>& heights,int n){
         vector<int> left;
         stack<pair<int,int>> s;
+        //pair is used to store the index with the element's value
         
         for(int i=0;i<n;i++){
             if(s.size()==0){
@@ -28,7 +29,8 @@ public:
         return left;
     }
     
-    
+   //create a function to find out the nearest smaller element on right side with its index
+   
     vector<int> NSR(vector<int>& heights,int n){
         vector<int> right;
         stack<pair<int,int>> s;
