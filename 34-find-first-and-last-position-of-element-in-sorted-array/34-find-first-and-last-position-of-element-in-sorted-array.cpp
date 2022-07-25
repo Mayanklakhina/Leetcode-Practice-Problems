@@ -16,10 +16,10 @@ public:
                 int temp = mid;
                 
                 while(mid>0 && nums[mid-1]==target)
-                    mid--;
+                  mid--;
                   i = mid;
                 while(temp<nums.size()-1&&nums[temp+1]==target)
-                    temp++;
+                temp++;
                 j=temp;
              
         result.push_back(i);
