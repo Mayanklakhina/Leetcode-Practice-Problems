@@ -6,6 +6,7 @@ priority_queue<pair<int,int>, vector<pair<int,int>>,greater<pair<int,int>> > min
             unordered_map<int,int> map;
             
             for(int i=0;i<nums.size();i++){
+             //for storing the values with their respective frequency
                     map[nums[i]]++;
             }
             
