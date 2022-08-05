@@ -24,9 +24,9 @@ public:
             }
                     block=temp;
             }
-            if(block.first>0){
-                    return "";
+            if(s.size()==result.size()){
+                    return result;
             }
-            return result;
+            return "";
     }
 };
