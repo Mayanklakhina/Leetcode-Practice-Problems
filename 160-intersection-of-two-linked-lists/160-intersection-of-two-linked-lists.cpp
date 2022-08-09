@@ -14,14 +14,18 @@ public:
 		int len1 = 0, len2 = 0;
 		ListNode *ptr1 = headA;
 		ListNode *ptr2 = headB;
-		while(ptr1 != NULL){
-			len1++;
-			ptr1 = ptr1 -> next;
-		}
-		while(ptr2 != NULL){
-			len2++;
-			ptr2 = ptr2 -> next;
-		}
+                
+          while(ptr1 != NULL || ptr2 != NULL) {
+            if(ptr1 != NULL) {
+                len1++;
+                ptr1 = ptr1->next;
+            }
+            if(ptr2 != NULL) {
+                len2++; 
+                    ptr2 = ptr2->next;
+            }
+          }
+
 		int diff = abs(len1 - len2);
 		if(len1 > len2){
 			while(diff){
