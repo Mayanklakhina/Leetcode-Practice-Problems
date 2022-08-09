@@ -17,7 +17,9 @@ public:
             ListNode *temp = new ListNode(-1);
             ListNode *ptr = temp;
             ListNode *headptr = head;
+            int size = 0;
             while(headptr!=NULL){
+                    size++;
                     ListNode *x = new ListNode(headptr->val);
                     ptr->next=x;
                     ptr=ptr->next;
@@ -33,9 +35,10 @@ public:
             }
             
             ListNode *ptr1 = p1;
-           
+           int count=0;
             
-            while(head!=NULL && ptr1!=NULL){
+            while(head!=NULL && ptr1!=NULL&&count<size/2){
+                    count++;
                   
             if(head->val !=ptr1->val) return false;
                    head=head->next;
