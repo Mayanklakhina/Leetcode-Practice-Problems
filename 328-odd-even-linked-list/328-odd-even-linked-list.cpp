@@ -12,39 +12,38 @@ class Solution {
 public:
     ListNode* oddEvenList(ListNode* head) {
         ListNode *evenS = NULL, *evenE=NULL, *oddS=NULL, *oddE=NULL;
-            int data=0;
-            for(ListNode *curr=head;curr!=NULL;curr=curr->next){
-                    // int data = curr->val;
-                    if(data%2==0){
+            int index=1;
+            for(ListNode *curr =  head; curr != NULL; curr = curr->next){
+                    if (index % 2 == 0) {
                             if(evenS==NULL){
                                     evenS=curr;
                                     evenE=evenS;
-                                    data++;
+                                    index++;
                             }
                             else{
                                     evenE->next = curr;
                                     evenE=evenE->next;
-                                    data++;
+                                    index++;
                             }
                     }
                     else{
                            if(oddS==NULL){
                                     oddS=curr;
                                     oddE=oddS;
-                                   data++;
+                                      index++;
                             }
                             else{
                                     oddE->next = curr;
                                     oddE=oddE->next;
-                                    data++;
+                                    index++;
                             } 
                     }
             }
             if(oddS==NULL || evenS==NULL)
                     return head;
-            evenE->next = oddS;
-            oddE->next = NULL;
+            oddE->next = evenS;
+            evenE->next = NULL;
             
-            return evenS;
+            return oddS;
     }
 };
