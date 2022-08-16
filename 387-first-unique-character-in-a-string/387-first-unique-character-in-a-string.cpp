@@ -8,9 +8,9 @@ public:
             //traversing the string and storing the frequency of each character
             hash[s[i]]++;
         }
+        
         for(int i=0;i<s.size();i++){
-            
-        if(hash[s[i]]==1)
+            if(hash[s[i]]==1) 
             return i;
             
         }
