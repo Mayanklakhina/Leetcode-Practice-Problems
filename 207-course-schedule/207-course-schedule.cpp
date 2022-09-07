@@ -5,7 +5,7 @@ public:
         queue<int> q;
         vector<int> indegree(numCourses,0);
             
-        vector<int> adj[numCourses];         // adj list        
+        vector<int> adj[numCourses];         // adjacency list        
         int edges = prerequisites.size();
         for(int i = 0;i<edges;i++){
             int u = prerequisites[i][0];
@@ -23,7 +23,9 @@ public:
         if(indegree[i] == 0)
         q.push(i);
     }
+            
     int count = 0;
+            
     while(!q.empty()){
         int node = q.front();
         q.pop();
@@ -36,7 +38,6 @@ public:
             }
         }
     }
-    if(count == numCourses) return true;
-    return false;
+    return (count == numCourses);
     }
 };
