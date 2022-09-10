@@ -22,7 +22,7 @@ public:
             }
             return p1;
             
-//             Brute Force Approach
+//  Brute Force Approach
 //         vector<int> answer;
             
 //             for(ListNode *curr=head;curr!=NULL;curr=curr->next){
