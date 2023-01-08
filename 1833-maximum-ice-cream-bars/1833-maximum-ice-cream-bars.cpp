@@ -4,10 +4,10 @@ public:
          sort(costs.begin(), costs.end());
          int count = 0;
            
-         //covering edge case
-         // if(coins < costs[0]){
-         //        return 0;
-         // }
+         // covering edge case
+         if(coins < costs[0]){
+                return 0;
+         }
             
         for(int i = 0; i < costs.size(); i++) {
                 if(coins > 0 && coins >= costs[i]) {
