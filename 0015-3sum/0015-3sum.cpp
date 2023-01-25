@@ -7,7 +7,7 @@ public:
             
        sort(nums.begin(), nums.end());
             
-       for(int i = 0; i < n; i++){
+       for(int i = 0; i < n-2; i++){
                if(i == 0 || (i > 0 && nums[i] != nums[i-1])) {
                    int low = i+1, high=n-1, sum = 0-nums[i];
                        
