@@ -12,12 +12,14 @@ public:
                                return;
                 }
                 
-                ds.push_back(candidates[i]);
                 if(candidates[i] <= target){
+                        
+                ds.push_back(candidates[i]);
                 combination(candidates, target-candidates[i], ds, i);
+                        
+                ds.pop_back();
                 }
                 
-                ds.pop_back();
                 
                 combination(candidates, target, ds, i+1);
         }
